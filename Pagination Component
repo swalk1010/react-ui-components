@@ -1,0 +1,10 @@
+const Pagination = ({ totalPages, currentPage, onPageChange }) => (
+  <div className="pagination">
+    {[...Array(totalPages)].map((_, i) => (
+      <button key={i} onClick={() => onPageChange(i + 1)}>{i + 1}</button>
+    ))}
+  </div>
+);
+
+// Usage
+<Pagination totalPages={5} currentPage={1} onPageChange={(page) => setCurrentPage(page)} />
