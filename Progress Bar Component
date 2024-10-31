@@ -1,0 +1,8 @@
+const ProgressBar = ({ percentage }) => (
+  <div className="progress-bar">
+    <div style={{ width: `${percentage}%` }} className="progress-bar-fill"></div>
+  </div>
+);
+
+// Usage
+<ProgressBar percentage={75} />
