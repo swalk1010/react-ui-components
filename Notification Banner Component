@@ -1,0 +1,6 @@
+const NotificationBanner = ({ message, type }) => (
+  <div className={`notification ${type}`}>{message}</div>
+);
+
+// Usage
+<NotificationBanner message="Success!" type="success" />
