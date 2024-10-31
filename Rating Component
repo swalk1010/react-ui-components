@@ -1,0 +1,10 @@
+const Rating = ({ rating }) => (
+  <div className="rating">
+    {[...Array(5)].map((_, i) => (
+      <span key={i} className={i < rating ? 'star filled' : 'star'}>★</span>
+    ))}
+  </div>
+);
+
+// Usage
+<Rating rating={3} />
