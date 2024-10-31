@@ -1,0 +1,8 @@
+const Button = ({ label, onClick, type = 'button', styleType = 'primary' }) => (
+  <button className={`btn btn-${styleType}`} onClick={onClick} type={type}>
+    {label}
+  </button>
+);
+
+// Usage
+<Button label="Click Me" onClick={() => alert('Button Clicked!')} />
