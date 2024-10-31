@@ -1,0 +1,14 @@
+const Accordion = ({ title, children }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="accordion">
+      <button onClick={() => setIsOpen(!isOpen)}>{title}</button>
+      {isOpen && <div className="accordion-content">{children}</div>}
+    </div>
+  );
+};
+
+// Usage
+<Accordion title="Click to Expand">
+  <p>Hidden Content</p>
+</Accordion>
