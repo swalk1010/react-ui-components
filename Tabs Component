@@ -1,0 +1,11 @@
+const Tabs = ({ tabs, selectedTab, onSelectTab }) => (
+  <div className="tabs">
+    {tabs.map((tab, index) => (
+      <button key={index} onClick={() => onSelectTab(tab)}>{tab.label}</button>
+    ))}
+    <div>{selectedTab.content}</div>
+  </div>
+);
+
+// Usage
+<Tabs tabs={[{ label: 'Tab 1', content: 'Content 1' }]} selectedTab={tabs[0]} onSelectTab={setSelectedTab} />
