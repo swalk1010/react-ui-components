@@ -1,0 +1,9 @@
+const Card = ({ title, content }) => (
+  <div className="card">
+    <h3>{title}</h3>
+    <p>{content}</p>
+  </div>
+);
+
+// Usage
+<Card title="Card Title" content="This is the card content." />
