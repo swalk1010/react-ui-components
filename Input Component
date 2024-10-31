@@ -1,0 +1,12 @@
+const Input = ({ type = 'text', placeholder, value, onChange }) => (
+  <input
+    type={type}
+    placeholder={placeholder}
+    value={value}
+    onChange={onChange}
+    className="input"
+  />
+);
+
+// Usage
+<Input placeholder="Enter your name" onChange={(e) => setName(e.target.value)} />
