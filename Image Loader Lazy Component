@@ -1,0 +1,15 @@
+const LazyImage = ({ src, alt }) => {
+  const [isInView, setInView] = useState(false);
+  const ref = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting));
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return <img ref={ref} src={isInView ? src : ''} alt={alt} />;
+};
+
+// Usage
+<LazyImage src="image.jpg" alt="Lazy Loaded Image" />
