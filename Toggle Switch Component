@@ -1,0 +1,8 @@
+const ToggleSwitch = ({ on, onToggle }) => (
+  <div onClick={onToggle} className={`toggle-switch ${on ? 'on' : 'off'}`}>
+    <div className="toggle-knob" />
+  </div>
+);
+
+// Usage
+<ToggleSwitch on={isToggled} onToggle={() => setIsToggled(!isToggled)} />
