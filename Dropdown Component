@@ -1,0 +1,10 @@
+const Dropdown = ({ options, onSelect }) => (
+  <select onChange={(e) => onSelect(e.target.value)}>
+    {options.map((option, index) => (
+      <option key={index} value={option.value}>{option.label}</option>
+    ))}
+  </select>
+);
+
+// Usage
+<Dropdown options={[{ label: 'Option 1', value: 1 }]} onSelect={(value) => console.log(value)} />
