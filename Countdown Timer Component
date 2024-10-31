@@ -1,0 +1,11 @@
+const CountdownTimer = ({ initialTime }) => {
+  const [timeLeft, setTimeLeft] = useState(initialTime);
+  useEffect(() => {
+    const timer = setInterval(() => setTimeLeft((t) => t - 1), 1000);
+    return () => clearInterval(timer);
+  }, []);
+  return <div>{timeLeft} seconds left</div>;
+};
+
+// Usage
+<CountdownTimer initialTime={10} />
