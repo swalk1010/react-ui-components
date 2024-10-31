@@ -1,0 +1,13 @@
+const Carousel = ({ images }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const nextImage = () => setCurrentIndex((currentIndex + 1) % images.length);
+  return (
+    <div className="carousel">
+      <img src={images[currentIndex]} alt="carousel" />
+      <button onClick={nextImage}>Next</button>
+    </div>
+  );
+};
+
+// Usage
+<Carousel images={['img1.jpg', 'img2.jpg', 'img3.jpg']} />
